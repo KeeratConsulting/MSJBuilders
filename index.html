@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MSJBuilders</title>
+  <title>MCJBuilders</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
@@ -66,80 +66,136 @@
 
 
 
-  <!-- Placeholder for Additional Sections -->
- <section id="services" class="py-24 bg-white text-black">
+ <!-- Highlighted Service Cards with Background Images -->
+<section id="services" class="py-24 bg-white text-black">
   <div class="max-w-7xl mx-auto px-6 text-center">
     <h2 class="text-4xl font-bold mb-4">Our Services</h2>
     <p class="text-lg text-gray-600 mb-12">We specialise in residential and commercial construction.</p>
 
     <div class="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
-      <!-- Service Card -->
-      <a href="#contact" class="bg-gray-100 hover:bg-black hover:text-white transition p-8 rounded shadow-md text-left">
-        <h3 class="text-2xl font-semibold mb-2">Bricklaying</h3>
-        <p class="text-sm text-gray-500">Durable and aesthetic structural brickwork.</p>
-      </a>
+      <!-- Focused Service: Bricklaying -->
+      <div class="relative p-8 bg-white bg-opacity-75 group-hover:bg-opacity-60 backdrop-blur">
+        <img src="assets/images/bricklaying.jpg" alt="Bricklaying" class="absolute inset-0 w-full h-full object-cover opacity-30 group-hover:opacity-50 transition duration-300">
+        <div class="relative p-8 bg-white bg-opacity-90 group-hover:bg-opacity-70 backdrop-blur">
+          <h3 class="text-2xl font-semibold mb-2">Bricklaying</h3>
+          <p class="text-sm text-gray-700">Durable and aesthetic structural brickwork.</p>
+          <button onclick="toggleDescription('brickDesc')" class="mt-4 text-sm text-[#a67c52] hover:underline">Read More</button>
+          <p id="brickDesc" class="text-sm text-gray-600 mt-2 hidden">We specialise in structural bricklaying, using top-grade materials and skilled craftsmanship.</p>
+        </div>
+      </div>
 
-      <a href="#contact" class="bg-gray-100 hover:bg-black hover:text-white transition p-8 rounded shadow-md text-left">
-        <h3 class="text-2xl font-semibold mb-2">Painting & Decorating</h3>
-        <p class="text-sm text-gray-500">Interior & exterior finishes that impress.</p>
-      </a>
+      <!-- Focused Service: Painting & Decorating -->
+      <div class="relative p-8 bg-white bg-opacity-75 group-hover:bg-opacity-60 backdrop-blur">
+        <img src="assets/images/painting.jpg" alt="Painting" class="absolute inset-0 w-full h-full object-cover opacity-30 group-hover:opacity-50 transition duration-300">
+        <div class="relative p-8 bg-white bg-opacity-80 group-hover:bg-opacity-5 backdrop-blur">
+          <h3 class="text-2xl font-semibold mb-2">Painting & Decorating</h3>
+          <p class="text-sm text-gray-700">Interior & exterior finishes that impress.</p>
+          <button onclick="toggleDescription('paintDesc')" class="mt-4 text-sm text-[#a67c52] hover:underline">Read More</button>
+          <p id="paintDesc" class="text-sm text-gray-600 mt-2 hidden">Our painting and decorating service ensures high-quality, long-lasting finishes for all surfaces.</p>
+        </div>
+      </div>
 
-      <a href="#contact" class="bg-gray-100 hover:bg-black hover:text-white transition p-8 rounded shadow-md text-left">
-        <h3 class="text-2xl font-semibold mb-2">Plastering</h3>
-        <p class="text-sm text-gray-500">Smooth walls and ceilings, expertly done.</p>
-      </a>
+      <!-- Focused Service: Plastering -->
+      <div class="relative p-8 bg-white bg-opacity-75 group-hover:bg-opacity-60 backdrop-blur">
+        <img src="assets/images/plastering.jpg" alt="Plastering" class="absolute inset-0 w-full h-full object-cover opacity-30 group-hover:opacity-50 transition duration-300">
+        <div class="relative p-8 bg-white bg-opacity-80 group-hover:bg-opacity-5 backdrop-blur">
+          <h3 class="text-2xl font-semibold mb-2">Plastering</h3>
+          <p class="text-sm text-gray-700">Smooth walls and ceilings, expertly done.</p>
+          <button onclick="toggleDescription('plasterDesc')" class="mt-4 text-sm text-[#a67c52] hover:underline">Read More</button>
+          <p id="plasterDesc" class="text-sm text-gray-600 mt-2 hidden">We offer expert plastering solutions that provide a perfect base for your decor.</p>
+        </div>
+      </div>
+    </div>
 
-      <a href="#contact" class="bg-gray-100 hover:bg-black hover:text-white transition p-8 rounded shadow-md text-left">
-        <h3 class="text-2xl font-semibold mb-2">Patios</h3>
-        <p class="text-sm text-gray-500">Outdoor patio spaces built to last.</p>
-      </a>
+    <!-- Get in Contact Button -->
+<div class="mt-10 text-center">
+  <a href="#contact" class="inline-block bg-[#a67c52] hover:bg-[#916b47] text-white px-6 py-3 rounded transition">
+    Get in Contact
+  </a>
+</div>
 
-      <a href="#contact" class="bg-gray-100 hover:bg-black hover:text-white transition p-8 rounded shadow-md text-left">
-        <h3 class="text-2xl font-semibold mb-2">House Extensions</h3>
-        <p class="text-sm text-gray-500">Seamless additions to expand your space.</p>
-      </a>
 
-      <a href="#contact" class="bg-gray-100 hover:bg-black hover:text-white transition p-8 rounded shadow-md text-left">
-        <h3 class="text-2xl font-semibold mb-2">House Renovation</h3>
-        <p class="text-sm text-gray-500">Transformations from floor to ceiling.</p>
-      </a>
-
-      <a href="#contact" class="bg-gray-100 hover:bg-black hover:text-white transition p-8 rounded shadow-md text-left">
-        <h3 class="text-2xl font-semibold mb-2">Demolition</h3>
-        <p class="text-sm text-gray-500">Safe and efficient site clearance.</p>
-      </a>
-
-      <a href="#contact" class="bg-gray-100 hover:bg-black hover:text-white transition p-8 rounded shadow-md text-left">
-        <h3 class="text-2xl font-semibold mb-2">Tiling</h3>
-        <p class="text-sm text-gray-500">Precision wall and floor tile installation.</p>
-      </a>
-
-      <a href="#contact" class="bg-gray-100 hover:bg-black hover:text-white transition p-8 rounded shadow-md text-left">
-        <h3 class="text-2xl font-semibold mb-2">Flooring</h3>
-        <p class="text-sm text-gray-500">Wood, tile, or concrete floor laying.</p>
-      </a>
-
-      <a href="#contact" class="bg-gray-100 hover:bg-black hover:text-white transition p-8 rounded shadow-md text-left">
-        <h3 class="text-2xl font-semibold mb-2">Concrete</h3>
-        <p class="text-sm text-gray-500">Foundations, slabs, and driveways.</p>
-      </a>
-
-      <a href="#contact" class="bg-gray-100 hover:bg-black hover:text-white transition p-8 rounded shadow-md text-left">
-        <h3 class="text-2xl font-semibold mb-2">Bathroom</h3>
-        <p class="text-sm text-gray-500">Full refurbishment & installations.</p>
-      </a>
+    <!-- Background Services List -->
+    <div class="mt-16 text-left">
+      <h3 class="text-2xl font-bold mb-4">Other Services</h3>
+      <ul class="space-y-4 text-lg">
+        <li><details><summary class="font-semibold cursor-pointer">Patios</summary><p class="ml-4 mt-1 text-gray-600">Outdoor patio spaces built to last.</p></details></li>
+        <li><details><summary class="font-semibold cursor-pointer">House Extensions</summary><p class="ml-4 mt-1 text-gray-600">Seamless additions to expand your space.</p></details></li>
+        <li><details><summary class="font-semibold cursor-pointer">House Renovation</summary><p class="ml-4 mt-1 text-gray-600">Transformations from floor to ceiling.</p></details></li>
+        <li><details><summary class="font-semibold cursor-pointer">Demolition</summary><p class="ml-4 mt-1 text-gray-600">Safe and efficient site clearance.</p></details></li>
+        <li><details><summary class="font-semibold cursor-pointer">Tiling</summary><p class="ml-4 mt-1 text-gray-600">Precision wall and floor tile installation.</p></details></li>
+        <li><details><summary class="font-semibold cursor-pointer">Flooring</summary><p class="ml-4 mt-1 text-gray-600">Wood, tile, or concrete floor laying.</p></details></li>
+        <li><details><summary class="font-semibold cursor-pointer">Concrete</summary><p class="ml-4 mt-1 text-gray-600">Foundations, slabs, and driveways.</p></details></li>
+        <li><details><summary class="font-semibold cursor-pointer">Bathroom</summary><p class="ml-4 mt-1 text-gray-600">Full refurbishment & installations.</p></details></li>
+      </ul>
     </div>
   </div>
 </section>
 
+<script>
+function toggleDescription(id) {
+  const desc = document.getElementById(id);
+  desc.classList.toggle("hidden");
+}
+</script>
+
+<section id="projects" class="py-24 bg-white text-black">
+  <div class="max-w-6xl mx-auto px-6 text-center">
+    <h2 class="text-4xl font-bold mb-8">Some of Our Work</h2>
+
+    <div class="relative mx-auto max-w-4xl overflow-hidden rounded shadow-lg">
+      <div id="carousel" class="flex transition-transform duration-700 ease-in-out w-[300%]">
+        <img src="assets/images/work1.jpg" class="w-full max-h-[500px] object-contain mx-auto" />
+
+        <img src="assets/images/work2.jpg" class="w-full h-96 object-cover flex-shrink-0" alt="Work 2" />
+        <img src="assets/images/work3.jpg" class="w-full h-96 object-cover flex-shrink-0" alt="Work 3" />
+      </div>
+
+      <!-- Arrows inside the frame, close to edges -->
+      <button onclick="prevSlide()" class="absolute top-1/2 left-2 transform -translate-y-1/2 bg-black bg-opacity-50 hover:bg-opacity-80 text-white p-3 rounded-full shadow-md z-10">
+        &#10094;
+      </button>
+      <button onclick="nextSlide()" class="absolute top-1/2 right-2 transform -translate-y-1/2 bg-black bg-opacity-50 hover:bg-opacity-80 text-white p-3 rounded-full shadow-md z-10">
+        &#10095;
+      </button>
+    </div>
+  </div>
+</section>
+
+
+
+
+<script>
+  let currentSlide = 0;
+  const totalSlides = 3;
+
+  function updateCarousel() {
+    const carousel = document.getElementById("carousel");
+    carousel.style.transform = `translateX(-${currentSlide * 100}%)`;
+  }
+
+  function nextSlide() {
+    currentSlide = (currentSlide + 1) % totalSlides;
+    updateCarousel();
+  }
+
+  function prevSlide() {
+    currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+    updateCarousel();
+  }
+</script>
+
+
+
+
 <section id="about" class="py-24 bg-black text-white">
-  <div class="max-w-5xl mx-auto px-6">
-    <h2 class="text-4xl font-bold mb-6 text-center">About Us</h2>
-    <p class="text-lg text-gray-300 leading-relaxed text-center">
+  <div class="max-w-5xl mx-auto px-6 text-center">
+    <h2 class="text-4xl font-bold mb-6">About Us</h2>
+    <p class="text-lg text-gray-300 leading-relaxed mb-8">
       MSJBuilders is a trusted construction and renovation company based in the UK. We bring decades of combined experience to every project — from bricklaying and house extensions to full renovations and finishes. Our reputation is built on quality workmanship, transparent communication, and long-term client satisfaction.
     </p>
 
-    <div class="mt-12 grid sm:grid-cols-2 gap-10 text-gray-400">
+    <div class="mt-12 grid sm:grid-cols-2 gap-10 text-gray-400 text-left">
       <div>
         <h3 class="text-xl font-semibold mb-2 text-white">Why Choose Us</h3>
         <ul class="space-y-2 list-disc list-inside">
@@ -156,22 +212,28 @@
         </p>
       </div>
     </div>
+
+    <div class="mt-12">
+      <a href="#contact" class="inline-block bg-[#a67c52] hover:bg-[#916b47] text-white px-6 py-3 rounded transition">
+        Contact Us Now and Receive Your Quote
+      </a>
+    </div>
   </div>
 </section>
 
-<section id="references" class="py-24 bg-gray-900 text-white">
+<section id="references" class="py-24 bg-white text-black">
   <div class="max-w-6xl mx-auto px-6 text-center">
     <h2 class="text-4xl font-bold mb-8">Companies We've Worked With</h2>
-    <p class="text-gray-400 mb-12">Trusted by top-tier residential developers, heritage specialists, and educational contractors.</p>
+    <p class="text-gray-600 mb-12">Trusted by top-tier residential developers, heritage specialists, and educational contractors.</p>
 
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 text-left">
-      <div class="bg-gray-800 p-6 rounded-lg shadow hover:shadow-lg transition">
-        <h3 class="text-xl font-semibold">Symms</h3>
-        <p class="text-gray-400 mt-2">Specialists in heritage and historical buildings.</p>
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 justify-center">
+      <div class="bg-white border border-gray-200 p-6 rounded-lg shadow hover:shadow-lg transition text-left">
+        <h3 class="text-xl font-semibold text-black">Symms</h3>
+        <p class="text-gray-700 mt-2">Specialists in heritage and historical buildings.</p>
       </div>
-      <div class="bg-gray-800 p-6 rounded-lg shadow hover:shadow-lg transition">
-        <h3 class="text-xl font-semibold">Knowles and Son</h3>
-        <p class="text-gray-400 mt-2">Projects with colleges and universities.</p>
+      <div class="bg-white border border-gray-200 p-6 rounded-lg shadow hover:shadow-lg transition text-left">
+        <h3 class="text-xl font-semibold text-black">Knowles and Son</h3>
+        <p class="text-gray-700 mt-2">Projects with colleges and universities.</p>
       </div>
     </div>
   </div>
