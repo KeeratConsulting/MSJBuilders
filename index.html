@@ -143,15 +143,27 @@ function toggleDescription(id) {
   <div class="max-w-6xl mx-auto px-6 text-center">
     <h2 class="text-4xl font-bold mb-8">Some of Our Work</h2>
 
-    <div class="relative mx-auto max-w-4xl overflow-hidden rounded shadow-lg">
-      <div id="carousel" class="flex transition-transform duration-700 ease-in-out w-[300%]">
-        <img src="assets/images/work1.jpg" class="w-full max-h-[500px] object-contain mx-auto" />
+    <div class="relative mx-auto w-full max-w-4xl h-[600px] overflow-hidden rounded shadow-lg">
+      <div id="carousel" class="flex transition-transform duration-700 ease-in-out">
+        <img src="assets/images/work1.jpg" class="min-w-full h-full object-cover" alt="Work 1" />
+        <img src="assets/images/work2.jpg" class="min-w-full h-full object-cover" alt="Work 2" />
+        <img src="assets/images/work3.jpg" class="min-w-full h-full object-cover" alt="Work 3" />
+        <img src="assets/images/work4.jpg" class="min-w-full h-full object-cover" alt="Work 4" />
+        <img src="assets/images/work5.jpg" class="min-w-full h-full object-cover" alt="Work 5" />
+        <img src="assets/images/work6.jpg" class="min-w-full h-full object-cover" alt="Work 6" />
+        <img src="assets/images/work7.jpg" class="min-w-full h-full object-cover" alt="Work 7" />
+        <img src="assets/images/work8.jpg" class="min-w-full h-full object-cover" alt="Work 8" />
+        <img src="assets/images/work9.jpg" class="min-w-full h-full object-cover" alt="Work 9" />
 
-        <img src="assets/images/work2.jpg" class="w-full h-96 object-cover flex-shrink-0" alt="Work 2" />
-        <img src="assets/images/work3.jpg" class="w-full h-96 object-cover flex-shrink-0" alt="Work 3" />
+        <video class="min-w-full h-full object-cover" controls muted>
+  <source src="assets/images/your-video.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+
       </div>
 
-      <!-- Arrows inside the frame, close to edges -->
+      <!-- Arrows -->
       <button onclick="prevSlide()" class="absolute top-1/2 left-2 transform -translate-y-1/2 bg-black bg-opacity-50 hover:bg-opacity-80 text-white p-3 rounded-full shadow-md z-10">
         &#10094;
       </button>
@@ -162,12 +174,9 @@ function toggleDescription(id) {
   </div>
 </section>
 
-
-
-
 <script>
   let currentSlide = 0;
-  const totalSlides = 3;
+  const totalSlides = 10;
 
   function updateCarousel() {
     const carousel = document.getElementById("carousel");
@@ -183,7 +192,11 @@ function toggleDescription(id) {
     currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
     updateCarousel();
   }
+
+  // Initialize the first position
+  updateCarousel();
 </script>
+
 
 
 
