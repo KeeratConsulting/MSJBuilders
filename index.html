@@ -26,20 +26,19 @@
 </div>
 
 
-<nav id="nav-menu" class="hidden md:flex flex-col md:flex-row md:space-x-10 text-lg font-medium text-white items-start md:items-center mt-4 md:mt-0 space-y-4 md:space-y-0 w-full md:w-auto">
-
-    <a href="#home" class="hover:text-gray-400 transition py-2 md:py-0">Home</a>
-    <a href="#services" class="hover:text-gray-400 transition py-2 md:py-0">Services</a>
-    <a href="#about" class="hover:text-gray-400 transition py-2 md:py-0">About</a>
-    <a href="#references" class="hover:text-gray-400 transition py-2 md:py-0">References</a>
-    <a href="#contact" class="bg-[#a67c52] hover:bg-[#916b47] text-white px-4 py-2 rounded flex items-center space-x-2 transition mt-2 md:mt-0">
-      <i class="fas fa-phone"></i>
-      <span>Get in Touch</span>
-    </a>
+<div id="mobile-menu-wrapper" class="w-full md:w-auto">
+  <nav id="nav-menu" class="hidden absolute top-full left-0 w-full bg-white md:static md:flex md:bg-transparent text-black md:text-white text-lg font-medium z-50 transition-all duration-300">
+    <div class="flex flex-col space-y-4 px-6 py-4 md:flex-row md:space-y-0 md:space-x-10 md:items-center w-full text-center">
+      <a href="#home" class="mobile-link py-2 w-full md:w-auto hover:text-gray-400">Home</a>
+      <a href="#services" class="mobile-link py-2 w-full md:w-auto hover:text-gray-400">Services</a>
+      <a href="#about" class="mobile-link py-2 w-full md:w-auto hover:text-gray-400">About</a>
+      <a href="#references" class="mobile-link py-2 w-full md:w-auto hover:text-gray-400">References</a>
+      <a href="#contact" class="mobile-link mt-2 w-full md:w-auto bg-[#a67c52] hover:bg-[#916b47] text-white px-4 py-2 rounded flex items-center justify-center transition">
+        <i class="fas fa-phone mr-2"></i> Get in Touch
+      </a>
+    </div>
   </nav>
 </div>
-
-
 </header>
 
 
@@ -67,70 +66,77 @@
 
 
  <!-- Highlighted Service Cards with Background Images -->
-<section id="services" class="py-24 bg-white text-black">
-  <div class="max-w-7xl mx-auto px-6 text-center">
-    <h2 class="text-4xl font-bold mb-4">Our Services</h2>
-    <p class="text-lg text-gray-600 mb-12">We specialise in residential and commercial construction.</p>
+<section id="services" class="py-24 bg-black text-white">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="bg-[#0e0e0e] rounded-2xl shadow-lg p-12">
+      <h2 class="text-4xl font-bold mb-4 text-white text-center">Our Services</h2>
+      <p class="text-lg text-gray-400 mb-12 text-center">We specialise in residential and commercial construction.</p>
 
-    <div class="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
-      <!-- Focused Service: Bricklaying -->
-      <div class="relative p-8 bg-white bg-opacity-75 group-hover:bg-opacity-60 backdrop-blur">
-        <img src="assets/images/bricklaying.jpg" alt="Bricklaying" class="absolute inset-0 w-full h-full object-cover opacity-30 group-hover:opacity-50 transition duration-300">
-        <div class="relative p-8 bg-white bg-opacity-90 group-hover:bg-opacity-70 backdrop-blur">
-          <h3 class="text-2xl font-semibold mb-2">Bricklaying</h3>
-          <p class="text-sm text-gray-700">Durable and aesthetic structural brickwork.</p>
-          <button onclick="toggleDescription('brickDesc')" class="mt-4 text-sm text-[#a67c52] hover:underline">Read More</button>
-          <p id="brickDesc" class="text-sm text-gray-600 mt-2 hidden">We specialise in structural bricklaying, using top-grade materials and skilled craftsmanship.</p>
+      <div class="grid gap-10 md:grid-cols-3">
+        <!-- Bricklaying -->
+        <div class="rounded-xl bg-[#1a1a1a] shadow-lg overflow-hidden hover:shadow-xl transition">
+          <img src="assets/images/bricklaying.jpg" class="h-48 w-full object-cover" />
+          <div class="p-6">
+            <h3 class="text-2xl font-semibold mb-2">Bricklaying</h3>
+            <p class="text-gray-300">Durable and aesthetic structural brickwork.</p>
+            <button onclick="toggleDescription('brickDesc')" class="mt-4 text-sm text-[#a67c52] hover:underline">Read More</button>
+            <p id="brickDesc" class="text-sm text-gray-400 mt-2 hidden">We specialise in structural bricklaying, using top-grade materials and skilled craftsmanship.</p>
+          </div>
+        </div>
+
+        <!-- Painting & Decorating -->
+        <div class="rounded-xl bg-[#1a1a1a] shadow-lg overflow-hidden hover:shadow-xl transition">
+          <img src="assets/images/painting.jpg" class="h-48 w-full object-cover" />
+          <div class="p-6">
+            <h3 class="text-2xl font-semibold mb-2">Painting & Decorating</h3>
+            <p class="text-gray-300">Interior & exterior finishes that impress.</p>
+            <button onclick="toggleDescription('paintDesc')" class="mt-4 text-sm text-[#a67c52] hover:underline">Read More</button>
+            <p id="paintDesc" class="text-sm text-gray-400 mt-2 hidden">Our painting and decorating service ensures high-quality, long-lasting finishes for all surfaces.</p>
+          </div>
+        </div>
+
+        <!-- Plastering -->
+        <div class="rounded-xl bg-[#1a1a1a] shadow-lg overflow-hidden hover:shadow-xl transition">
+          <img src="assets/images/plastering.jpg" class="h-48 w-full object-cover" />
+          <div class="p-6">
+            <h3 class="text-2xl font-semibold mb-2">Plastering</h3>
+            <p class="text-gray-300">Smooth walls and ceilings, expertly done.</p>
+            <button onclick="toggleDescription('plasterDesc')" class="mt-4 text-sm text-[#a67c52] hover:underline">Read More</button>
+            <p id="plasterDesc" class="text-sm text-gray-400 mt-2 hidden">We offer expert plastering solutions that provide a perfect base for your decor.</p>
+          </div>
         </div>
       </div>
 
-      <!-- Focused Service: Painting & Decorating -->
-      <div class="relative p-8 bg-white bg-opacity-75 group-hover:bg-opacity-60 backdrop-blur">
-        <img src="assets/images/painting.jpg" alt="Painting" class="absolute inset-0 w-full h-full object-cover opacity-30 group-hover:opacity-50 transition duration-300">
-        <div class="relative p-8 bg-white bg-opacity-80 group-hover:bg-opacity-5 backdrop-blur">
-          <h3 class="text-2xl font-semibold mb-2">Painting & Decorating</h3>
-          <p class="text-sm text-gray-700">Interior & exterior finishes that impress.</p>
-          <button onclick="toggleDescription('paintDesc')" class="mt-4 text-sm text-[#a67c52] hover:underline">Read More</button>
-          <p id="paintDesc" class="text-sm text-gray-600 mt-2 hidden">Our painting and decorating service ensures high-quality, long-lasting finishes for all surfaces.</p>
-        </div>
+      <!-- Contact Button -->
+      <div class="mt-12 text-center">
+        <a href="#contact" class="inline-block bg-[#a67c52] hover:bg-[#916b47] text-white px-6 py-3 rounded transition">
+          Get in Contact
+        </a>
       </div>
-
-      <!-- Focused Service: Plastering -->
-      <div class="relative p-8 bg-white bg-opacity-75 group-hover:bg-opacity-60 backdrop-blur">
-        <img src="assets/images/plastering.jpg" alt="Plastering" class="absolute inset-0 w-full h-full object-cover opacity-30 group-hover:opacity-50 transition duration-300">
-        <div class="relative p-8 bg-white bg-opacity-80 group-hover:bg-opacity-5 backdrop-blur">
-          <h3 class="text-2xl font-semibold mb-2">Plastering</h3>
-          <p class="text-sm text-gray-700">Smooth walls and ceilings, expertly done.</p>
-          <button onclick="toggleDescription('plasterDesc')" class="mt-4 text-sm text-[#a67c52] hover:underline">Read More</button>
-          <p id="plasterDesc" class="text-sm text-gray-600 mt-2 hidden">We offer expert plastering solutions that provide a perfect base for your decor.</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- Get in Contact Button -->
-<div class="mt-10 text-center">
-  <a href="#contact" class="inline-block bg-[#a67c52] hover:bg-[#916b47] text-white px-6 py-3 rounded transition">
-    Get in Contact
-  </a>
-</div>
-
-
-    <!-- Background Services List -->
-    <div class="mt-16 text-left">
-      <h3 class="text-2xl font-bold mb-4">Other Services</h3>
-      <ul class="space-y-4 text-lg">
-        <li><details><summary class="font-semibold cursor-pointer">Patios</summary><p class="ml-4 mt-1 text-gray-600">Outdoor patio spaces built to last.</p></details></li>
-        <li><details><summary class="font-semibold cursor-pointer">House Extensions</summary><p class="ml-4 mt-1 text-gray-600">Seamless additions to expand your space.</p></details></li>
-        <li><details><summary class="font-semibold cursor-pointer">House Renovation</summary><p class="ml-4 mt-1 text-gray-600">Transformations from floor to ceiling.</p></details></li>
-        <li><details><summary class="font-semibold cursor-pointer">Demolition</summary><p class="ml-4 mt-1 text-gray-600">Safe and efficient site clearance.</p></details></li>
-        <li><details><summary class="font-semibold cursor-pointer">Tiling</summary><p class="ml-4 mt-1 text-gray-600">Precision wall and floor tile installation.</p></details></li>
-        <li><details><summary class="font-semibold cursor-pointer">Flooring</summary><p class="ml-4 mt-1 text-gray-600">Wood, tile, or concrete floor laying.</p></details></li>
-        <li><details><summary class="font-semibold cursor-pointer">Concrete</summary><p class="ml-4 mt-1 text-gray-600">Foundations, slabs, and driveways.</p></details></li>
-        <li><details><summary class="font-semibold cursor-pointer">Bathroom</summary><p class="ml-4 mt-1 text-gray-600">Full refurbishment & installations.</p></details></li>
-      </ul>
     </div>
   </div>
 </section>
+
+
+
+<!-- Other Services -->
+<section class="bg-white text-black py-20">
+  <div class="max-w-6xl mx-auto px-6 text-center">
+    <h3 class="text-3xl font-bold mb-10">Other Services</h3>
+
+    <div class="max-w-3xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-5 text-gray-700 text-lg text-left">
+      <details class="transition duration-300 ease-in-out"><summary class="cursor-pointer font-semibold">Patios</summary><p class="ml-4 mt-1 text-gray-500">Outdoor patio spaces built to last.</p></details>
+      <details class="transition duration-300 ease-in-out"><summary class="cursor-pointer font-semibold">House Extensions</summary><p class="ml-4 mt-1 text-gray-500">Seamless additions to expand your space.</p></details>
+      <details class="transition duration-300 ease-in-out"><summary class="cursor-pointer font-semibold">House Renovation</summary><p class="ml-4 mt-1 text-gray-500">Transformations from floor to ceiling.</p></details>
+      <details class="transition duration-300 ease-in-out"><summary class="cursor-pointer font-semibold">Demolition</summary><p class="ml-4 mt-1 text-gray-500">Safe and efficient site clearance.</p></details>
+      <details class="transition duration-300 ease-in-out"><summary class="cursor-pointer font-semibold">Tiling</summary><p class="ml-4 mt-1 text-gray-500">Precision wall and floor tile installation.</p></details>
+      <details class="transition duration-300 ease-in-out"><summary class="cursor-pointer font-semibold">Flooring</summary><p class="ml-4 mt-1 text-gray-500">Wood, tile, or concrete floor laying.</p></details>
+      <details class="transition duration-300 ease-in-out"><summary class="cursor-pointer font-semibold">Concrete</summary><p class="ml-4 mt-1 text-gray-500">Foundations, slabs, and driveways.</p></details>
+      <details class="transition duration-300 ease-in-out"><summary class="cursor-pointer font-semibold">Bathroom</summary><p class="ml-4 mt-1 text-gray-500">Full refurbishment & installations.</p></details>
+    </div>
+  </div>
+</section>
+
 
 <script>
 function toggleDescription(id) {
@@ -144,24 +150,36 @@ function toggleDescription(id) {
     <h2 class="text-4xl font-bold mb-8">Some of Our Work</h2>
 
     <div class="relative mx-auto w-full max-w-4xl h-[600px] overflow-hidden rounded shadow-lg">
-      <div id="carousel" class="flex transition-transform duration-700 ease-in-out">
-        <img src="assets/images/work1.jpg" class="min-w-full h-full object-cover" alt="Work 1" />
-        <img src="assets/images/work2.jpg" class="min-w-full h-full object-cover" alt="Work 2" />
-        <img src="assets/images/work3.jpg" class="min-w-full h-full object-cover" alt="Work 3" />
-        <img src="assets/images/work4.jpg" class="min-w-full h-full object-cover" alt="Work 4" />
-        <img src="assets/images/work5.jpg" class="min-w-full h-full object-cover" alt="Work 5" />
-        <img src="assets/images/work6.jpg" class="min-w-full h-full object-cover" alt="Work 6" />
-        <img src="assets/images/work7.jpg" class="min-w-full h-full object-cover" alt="Work 7" />
-        <img src="assets/images/work8.jpg" class="min-w-full h-full object-cover" alt="Work 8" />
-        <img src="assets/images/work9.jpg" class="min-w-full h-full object-cover" alt="Work 9" />
+ <div id="carousel" class="flex transition-transform duration-700 ease-in-out">
+  <!-- Images -->
+  <img src="assets/images/work1.jpg" class="min-w-full h-full object-cover" alt="Work 1" />
+<img src="assets/images/work2.jpg" class="min-w-full h-full object-cover" alt="Work 2" />
+<img src="assets/images/work3.jpg" class="min-w-full h-full object-cover" alt="Work 3" />
+<img src="assets/images/work4.jpg" class="min-w-full h-full object-cover" alt="Work 4" />
+<img src="assets/images/work5.jpg" class="min-w-full h-full object-cover" alt="Work 5" />
+<img src="assets/images/work6.jpg" class="min-w-full h-full object-cover" alt="Work 6" />
+<img src="assets/images/work7.jpg" class="min-w-full h-full object-cover" alt="Work 7" />
+<img src="assets/images/work8.jpg" class="min-w-full h-full object-cover" alt="Work 8" />
+<img src="assets/images/work9.jpg" class="min-w-full h-full object-cover" alt="Work 9" />
+<img src="assets/images/work10.jpg" class="min-w-full h-full object-cover" alt="Work 10" />
+<img src="assets/images/work11.jpg" class="min-w-full h-[600px] object-contain" alt="Work 11" />
+<img src="assets/images/work12.jpg" class="min-w-full h-[600px] object-contain" alt="Work 12" />
+<img src="assets/images/work13.jpg" class="min-w-full h-[600px] object-contain" alt="Work 13" />
+<img src="assets/images/work14.jpg" class="min-w-full h-[600px] object-contain" alt="Work 14" />
 
-        <video class="min-w-full h-full object-cover" controls muted>
-  <source src="assets/images/your-video.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
 
+  <!-- Videos -->
+  <video class="min-w-full h-full object-cover" controls muted>
+    <source src="assets/images/your-video.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
 
-      </div>
+  <video class="min-w-full h-full object-cover" controls muted>
+    <source src="assets/images/video2.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+</div>
+
 
       <!-- Arrows -->
       <button onclick="prevSlide()" class="absolute top-1/2 left-2 transform -translate-y-1/2 bg-black bg-opacity-50 hover:bg-opacity-80 text-white p-3 rounded-full shadow-md z-10">
@@ -176,7 +194,8 @@ function toggleDescription(id) {
 
 <script>
   let currentSlide = 0;
-  const totalSlides = 10;
+  const totalSlides = 16; // 14 images + 2 videos
+
 
   function updateCarousel() {
     const carousel = document.getElementById("carousel");
@@ -311,15 +330,27 @@ function toggleDescription(id) {
 </footer>
 
 <script>
-  document.addEventListener('DOMContentLoaded', function () {
+  document.addEventListener('DOMContentLoaded', () => {
     const navToggle = document.getElementById('nav-toggle');
     const navMenu = document.getElementById('nav-menu');
+    const mobileLinks = document.querySelectorAll('.mobile-link');
 
-    navToggle.addEventListener('click', function () {
+    navToggle.addEventListener('click', () => {
       navMenu.classList.toggle('hidden');
+    });
+
+    mobileLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        if (window.innerWidth < 768) {
+          navMenu.classList.add('hidden');
+        }
+      });
     });
   });
 </script>
+
+
+
 
 
 
