@@ -115,3 +115,7 @@ button {
 .shadow-subtle {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* very soft shadow */
 }
+img {
+  max-width: 100%;
+  height: auto;
+}
