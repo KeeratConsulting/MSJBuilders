@@ -199,7 +199,7 @@ function toggleDescription(id) {
 
   function updateCarousel() {
     const carousel = document.getElementById("carousel");
-    carousel.style.transform = `translateX(-${currentSlide * 100}%)`;
+    carousel.style.transform = translateX(-${currentSlide * 100}%);
   }
 
   function nextSlide() {
@@ -314,7 +314,7 @@ function toggleDescription(id) {
 
     const formData = new FormData(form);
 
-    const response = await fetch("https://script.google.com/macros/s/AKfycbxX0J9ijuPz1mvjHRQtpNbbb1k5kiHqjhyxIqku9Ckdf15WqRam5qQIQzHfd4m4iPVH9w/exec", {
+    const response = await fetch("https://script.google.com/macros/s/AKfycbxsgg5e9LqOZ1zaG8wzqFVM2z6o1JAoukwD6HCJ89RX/exec", {
       method: "POST",
       body: formData
     });
@@ -358,12 +358,6 @@ function toggleDescription(id) {
     });
   });
 </script>
-
-
-
-
-
-
 
 
 </body>
