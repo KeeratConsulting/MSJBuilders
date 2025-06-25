@@ -295,29 +295,23 @@ function toggleDescription(id) {
       </div>
     </div>
 
-    <!-- Right Form -->
-<form id="contact-form" action="https://formspree.io/f/xnnvoqdl" method="POST" class="space-y-6 text-left">
-
-
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-    <input name="name" type="text" placeholder="Full Name" required class="w-full p-4 rounded bg-gray-900 text-white border border-gray-700">
-    <input name="email" type="email" placeholder="Email Address" required class="w-full p-4 rounded bg-gray-900 text-white border border-gray-700">
-  </div>
-
+    <form action="https://formspree.io/f/mgvypapo" method="POST" class="space-y-6 text-left">
+  <input name="name" type="text" placeholder="Full Name" required class="w-full p-4 rounded bg-gray-900 text-white border border-gray-700">
+  <input name="email" type="email" placeholder="Email Address" required class="w-full p-4 rounded bg-gray-900 text-white border border-gray-700">
   <input name="subject" type="text" placeholder="Subject" required class="w-full p-4 rounded bg-gray-900 text-white border border-gray-700">
-
   <textarea name="message" rows="5" placeholder="Your Message" required class="w-full p-4 rounded bg-gray-900 text-white border border-gray-700"></textarea>
-
- 
+  
+  <!-- Hidden Fields -->
   <input type="hidden" name="_captcha" value="false">
-  <input type="hidden" name="_next" value="https://mcjbuilders.co.uk/">
+  <input type="hidden" name="_next" value="https://mcjbuilders.co.uk/thankyou.html">
 
   <button type="submit" class="bg-white text-black px-6 py-3 rounded hover:bg-gray-200 transition">Send Message</button>
 </form>
 
+
 <!-- Thank You Message -->
 <div id="thank-you-message" class="hidden text-green-400 mt-4 text-lg">
-  ✅ Thank you! We’ve received your message.
+  Thank you! We’ve received your message.
 </div>
 
 </section>
