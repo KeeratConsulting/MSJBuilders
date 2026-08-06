@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -10,8 +9,54 @@
 
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="css/style.css" />
+
+  <style>
+    /* Modern touches that Tailwind utility classes don't cover cleanly */
+    h1, h2, h3, .heading-font {
+      font-family: 'Poppins', 'Helvetica Neue', sans-serif;
+      letter-spacing: -0.01em;
+    }
+    .eyebrow {
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: #a67c52;
+    }
+    .service-card {
+      transition: transform 0.35s ease, box-shadow 0.35s ease;
+    }
+    .service-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 40px -12px rgba(0,0,0,0.5);
+    }
+    .service-card img {
+      transition: transform 0.6s ease;
+    }
+    .service-card:hover img {
+      transform: scale(1.06);
+    }
+    .service-icon {
+      width: 44px;
+      height: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 9999px;
+      background: #a67c52;
+      color: #fff;
+      font-size: 1.1rem;
+      margin-top: -46px;
+      margin-left: 20px;
+      position: relative;
+      box-shadow: 0 6px 16px rgba(166,124,82,0.4);
+    }
+  </style>
 </head>
 
 <body class="bg-black text-white font-sans scroll-smooth">
@@ -74,36 +119,52 @@
 <section id="services" class="py-24 bg-black text-white">
   <div class="max-w-7xl mx-auto px-6">
     <div class="bg-[#0e0e0e] rounded-2xl shadow-lg p-12">
+      <p class="eyebrow text-center mb-3">What we do</p>
       <h2 class="text-4xl font-bold mb-4 text-white text-center">Our Services</h2>
       <p class="text-lg text-gray-400 mb-12 text-center">We specialise in residential and commercial construction.</p>
 
-      <div class="grid gap-10 md:grid-cols-3">
+      <div class="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
         <!-- Bricklaying -->
-        <div class="rounded-xl bg-[#1a1a1a] shadow-lg overflow-hidden hover:shadow-xl transition">
-          <img src="assets/images/bricklaying.jpg" class="h-48 w-full object-cover" />
-          <div class="p-6">
+        <div class="service-card rounded-xl bg-[#1a1a1a] shadow-lg overflow-hidden">
+          <img src="assets/images/bricklaying.jpg" class="h-48 w-full object-cover" alt="Bricklaying" />
+          <div class="service-icon"><i class="fa-solid fa-trowel-bricks"></i></div>
+          <div class="p-6 pt-4">
             <h3 class="text-2xl font-semibold mb-2">Bricklaying</h3>
             <p class="text-gray-300">Durable and aesthetic structural brickwork.</p>
             <button onclick="toggleDescription('brickDesc')" class="mt-4 text-sm text-[#a67c52] hover:underline">Read More</button>
-            <p id="brickDesc" class="text-sm text-gray-400 mt-2 hidden">We specialise in structural bricklaying, using top-grade materials and skilled craftsmanship.</p>
+            <p id="brickDesc" class="text-sm text-gray-400 mt-2 hidden">We specialise in high-quality structural and decorative bricklaying for both residential and commercial projects. Using top-grade materials and skilled craftsmanship, we deliver precise, durable brickwork that combines strength with excellent visual appeal. From new builds and house extensions to garden walls, chimneys, and careful matching of existing brickwork, every project is completed to the highest standards — ensuring lasting results and a clean, professional finish.</p>
+          </div>
+        </div>
+
+        <!-- Patios -->
+        <div class="service-card rounded-xl bg-[#1a1a1a] shadow-lg overflow-hidden">
+          <img src="assets/images/NEWPicture1.jpg" class="h-48 w-full object-cover" alt="Patios" />
+          <div class="service-icon"><i class="fa-solid fa-border-all"></i></div>
+          <div class="p-6 pt-4">
+            <h3 class="text-2xl font-semibold mb-2">Patios</h3>
+            <p class="text-gray-300">Outdoor patio spaces built to last.</p>
+            <button onclick="toggleDescription('patioDesc')" class="mt-4 text-sm text-[#a67c52] hover:underline">Read More</button>
+            <p id="patioDesc" class="text-sm text-gray-400 mt-2 hidden">We design and build high-quality outdoor patio spaces that are both durable and stylish. Using premium materials and careful craftsmanship, we create patios that enhance your outdoor living area and stand up to everyday use. Whether you need a new patio, an extension to an existing one, or a complete redesign, we deliver clean finishes, solid foundations, and a result you'll enjoy for years to come.</p>
           </div>
         </div>
 
         <!-- Painting & Decorating -->
-        <div class="rounded-xl bg-[#1a1a1a] shadow-lg overflow-hidden hover:shadow-xl transition">
-          <img src="assets/images/painting.jpg" class="h-48 w-full object-cover" />
-          <div class="p-6">
+        <div class="service-card rounded-xl bg-[#1a1a1a] shadow-lg overflow-hidden">
+          <img src="assets/images/painting.jpg" class="h-48 w-full object-cover" alt="Painting & Decorating" />
+          <div class="service-icon"><i class="fa-solid fa-paint-roller"></i></div>
+          <div class="p-6 pt-4">
             <h3 class="text-2xl font-semibold mb-2">Painting & Decorating</h3>
             <p class="text-gray-300">Interior & exterior finishes that impress.</p>
             <button onclick="toggleDescription('paintDesc')" class="mt-4 text-sm text-[#a67c52] hover:underline">Read More</button>
-            <p id="paintDesc" class="text-sm text-gray-400 mt-2 hidden">Our painting and decorating service ensures high-quality, long-lasting finishes for all surfaces.</p>
+            <p id="paintDesc" class="text-sm text-gray-400 mt-2 hidden">We provide professional interior and exterior painting and decorating that delivers high-quality, long-lasting finishes. Using carefully selected materials and skilled application techniques, we transform walls, ceilings, and surfaces to create clean, impressive results. From full property refreshes and detailed interior work to exterior protection and colour schemes, every project is completed with precision, care, and a tidy finish you'll be proud of.</p>
           </div>
         </div>
 
         <!-- Plastering -->
-        <div class="rounded-xl bg-[#1a1a1a] shadow-lg overflow-hidden hover:shadow-xl transition">
-          <img src="assets/images/Plaster.jpg" class="h-48 w-full object-cover" />
-          <div class="p-6">
+        <div class="service-card rounded-xl bg-[#1a1a1a] shadow-lg overflow-hidden">
+          <img src="assets/images/Plaster.jpg" class="h-48 w-full object-cover" alt="Plastering" />
+          <div class="service-icon"><i class="fa-solid fa-layer-group"></i></div>
+          <div class="p-6 pt-4">
             <h3 class="text-2xl font-semibold mb-2">Plastering</h3>
             <p class="text-gray-300">Smooth walls and ceilings, expertly done.</p>
             <button onclick="toggleDescription('plasterDesc')" class="mt-4 text-sm text-[#a67c52] hover:underline">Read More</button>
@@ -130,7 +191,6 @@
     <h3 class="text-3xl font-bold mb-10">Other Services</h3>
 
     <div class="max-w-3xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-5 text-gray-700 text-lg text-left">
-      <details class="transition duration-300 ease-in-out"><summary class="cursor-pointer font-semibold">Patios</summary><p class="ml-4 mt-1 text-gray-500">Outdoor patio spaces built to last.</p></details>
       <details class="transition duration-300 ease-in-out"><summary class="cursor-pointer font-semibold">House Extensions</summary><p class="ml-4 mt-1 text-gray-500">Seamless additions to expand your space.</p></details>
       <details class="transition duration-300 ease-in-out"><summary class="cursor-pointer font-semibold">House Renovation</summary><p class="ml-4 mt-1 text-gray-500">Transformations from floor to ceiling.</p></details>
       <details class="transition duration-300 ease-in-out"><summary class="cursor-pointer font-semibold">Demolition</summary><p class="ml-4 mt-1 text-gray-500">Safe and efficient site clearance.</p></details>
@@ -157,9 +217,11 @@ function toggleDescription(id) {
     <div class="relative mx-auto w-full max-w-4xl h-[600px] overflow-hidden rounded shadow-lg">
  <div id="carousel" class="flex transition-transform duration-700 ease-in-out">
   <!-- Images -->
-  
-  <img src="assets/images/work1.jpg" class="min-w-full h-[600px] object-contain" alt="Work 1" />
 
+  <img src="assets/images/Tango.jpeg" class="min-w-full h-[600px] object-contain" alt="Tango" />
+<img src="assets/images/Tina.jpeg" class="min-w-full h-[600px] object-contain" alt="Tina" />
+<img src="assets/images/Tessa.jpeg" class="min-w-full h-[600px] object-contain" alt="Tessa" />
+<img src="assets/images/work1.jpg" class="min-w-full h-[600px] object-contain" alt="Work 1" />
 <img src="assets/images/work2.jpg" class="min-w-full h-[600px] object-contain" alt="Work 2" />
 <img src="assets/images/work3.jpg" class="min-w-full h-[600px] object-contain" alt="Work 3" />
 <img src="assets/images/work4.jpg" class="min-w-full h-[600px] object-contain" alt="Work 4" />
@@ -199,7 +261,7 @@ function toggleDescription(id) {
 
   function updateCarousel() {
     const carousel = document.getElementById("carousel");
-    carousel.style.transform = translateX(-${currentSlide * 100}%);
+    carousel.style.transform = `translateX(-${currentSlide * 100}%)`;
   }
 
   function nextSlide() {
@@ -226,7 +288,7 @@ function toggleDescription(id) {
   <div class="max-w-5xl mx-auto px-6 text-center">
     <h2 class="text-4xl font-bold mb-6">About Us</h2>
     <p class="text-lg text-gray-300 leading-relaxed mb-8">
-      MSJBuilders is a trusted construction and renovation company based in the UK. We bring decades of combined experience to every project — from bricklaying and house extensions to full renovations and finishes. Our reputation is built on quality workmanship, transparent communication, and long-term client satisfaction.
+      MCJBuilders is a trusted construction and renovation company based in the UK. We bring decades of combined experience to every project — from bricklaying and house extensions to full renovations and finishes. Our reputation is built on quality workmanship, transparent communication, and long-term client satisfaction.
     </p>
 
     <div class="mt-12 grid sm:grid-cols-2 gap-10 text-gray-400 text-left">
@@ -242,7 +304,7 @@ function toggleDescription(id) {
       <div>
         <h3 class="text-xl font-semibold mb-2 text-white">Our Promise</h3>
         <p>
-          We don’t just build — we create lasting relationships with our clients. From first consultation to project handover, you can expect clear updates, expert craftsmanship, and absolute professionalism.
+          We don't just build — we create lasting relationships with our clients. From first consultation to project handover, you can expect clear updates, expert craftsmanship, and absolute professionalism.
         </p>
       </div>
     </div>
@@ -283,7 +345,7 @@ function toggleDescription(id) {
 
 <section id="contact" class="py-24 bg-black text-white">
   <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-start">
-    
+
     <!-- Left Contact Info -->
     <div class="space-y-6">
       <h2 class="text-4xl font-bold">Get in Touch</h2>
@@ -301,7 +363,7 @@ function toggleDescription(id) {
   <input name="email" type="email" placeholder="Email Address" required class="w-full p-4 rounded bg-gray-900 text-white border border-gray-700">
   <input name="subject" type="text" placeholder="Subject" required class="w-full p-4 rounded bg-gray-900 text-white border border-gray-700">
   <textarea name="message" rows="5" placeholder="Your Message" required class="w-full p-4 rounded bg-gray-900 text-white border border-gray-700"></textarea>
-  
+
   <!-- Hidden Fields -->
   <input type="hidden" name="_captcha" value="false">
   <input type="hidden" name="_next" value="https://mcjbuilders.co.uk/thankyou.html">
@@ -312,7 +374,7 @@ function toggleDescription(id) {
 
 <!-- Thank You Message -->
 <div id="thank-you-message" class="hidden text-green-400 mt-4 text-lg">
-  ✅ Thank you! We’ve received your message.
+  ✅ Thank you! We've received your message.
 </div>
 
 </section>
@@ -352,7 +414,7 @@ function toggleDescription(id) {
 
 
   <footer class="bg-black text-center py-6 text-gray-400 text-sm">
-  © 2025 MSJBuilders. All rights reserved.
+  © 2025 MCJBuilders. All rights reserved.
 </footer>
 
 <script>
